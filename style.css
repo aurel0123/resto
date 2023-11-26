@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&family=Raleway:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #27ae60;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+section{
+    margin-top: 50px;
+}
+body{
+    position: relative;
+}
+header{
+    position: fixed;
+    top : 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255,255,255, 0.9);
+    height: 50px;
+    padding: 0 10%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+header .logo a {
+    color : #273e60; 
+    font-size : 25px ; 
+    text-decoration: none ;
+    font-weight : 700 ;
+}
+
+header .logo span {
+    color:#27ae60 ; 
+}
+header .menu {
+    display : flex ; 
+   
+}
+header .menu li {
+    list-style-type: none;
+    margin: 25px ;
+}
+header .menu a {
+    text-transform: capitalize;
+    color : #999; 
+    font-size: 14px ; 
+    text-decoration : none ;
+    position: relative;
+}
+header .menu a::before{
+    position : absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    background-color: #27ae60;
+    width: 0%;
+    height: 2px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+header .menu a::after{
+    position : absolute;
+    bottom: -5px;
+    right: 0;
+    content: "";
+    background-color: #27ae60;
+    width: 0%;
+    height: 2px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+header .menu a:hover::after{
+    width: 100%;
+}
+header .menu a:hover::before{
+    width: 100%;
+}
+
+/* home css*/
+#home {
+    margin-top: 50px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 600px; /*height: calc(100vh - 50px); */
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+}
+.left h3 {
+    font-size: 25px ; 
+    color: #27ae60;
+    text-transform: capitalize;
+    
+}
+.left h1{
+    font-size: 40px ; 
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px ;
+}
+.left p {
+    font-size: 14px;
+    color : #999; 
+    margin-bottom: 20px ;
+}
+.left button{
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #111;
+    border: 0;
+    transition: 0.5s ;
+    position: relative;
+}
+.left button a {
+    text-decoration: none ;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.left button:hover{
+    letter-spacing: 2px;
+}
+.left button a::after{
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+    content: "";
+    background-color: #27ae60;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#home .rigth{
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#home .rigth img {
+    width: 100%;
+    animation: animate 2s linear;  
+    transition: 0.5s ease-out;
+}
+@keyframes animate{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/*section menu*/
+#menu{
+    display: flex;
+    margin-top: 50px;
+    background-color: rgba(0,0,0,0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+ .mini_title{
+    color: #27ae60;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #273e60;
+}
+.contenu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+}
+.contenu .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    width: 30%;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 25px;
+    margin-bottom:36px ;
+    margin-top: 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contenu .box img {
+    width: 130px;
+    height:120px ;
+    margin-bottom: 15px ;
+}
+.contenu .box p{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: center;
+}
+.contenu .box h2 {
+    font-weight: bold;
+}
+.contenu .box a {
+    margin-top: 10px;
+    background-color: #27ae60;
+    color : #fff; 
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 6px;
+    /*width: 50%;*/
+    text-align: center;
+    padding: 5px 60px;
+}
+
+/*about us css*/
+#A_propos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+    padding: 50px 10%;
+}
+#A_propos .about {
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+    align-items: center;
+    width: 100%;
+}
+.about  .img_a_propos {
+    width: 40%;
+    height:100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.img_a_propos img {
+    width: 80%;
+}
+.about .text{
+    width: 60%;
+}
+.text h2{
+    color: #273e60;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.text p {
+    color: #999;
+    font-size: 13px ;
+    margin-bottom: 27px;
+    font-weight: 500;
+}
+.text a {
+    text-decoration: none ;
+    color: #fff;
+    font-size: 14px;
+    background-color: #27ae60;
+    padding: 5px 60px;
+    text-transform: capitalize ;
+    font-weight: bold;
+}
+
+/*comment css*/
+.comment_section{
+    display: flex;
+    align-items: center;
+    height: 600px;
+    flex-direction: column;
+    padding: 0px 10%;
+    justify-content: center;
+}
+.comments{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+.comment .img {
+    display: flex;
+    align-items: center;
+    margin-bottom:10px ;
+}
+.comment .img img {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #27ae60;
+    border-radius: 50%;
+}
+ .comments .comment  {
+    border:  1px solid #999;
+    width: 30%;
+    border-radius: 6px; 
+    padding: 20px ;
+ }
+ .comments .comment div h4{
+    margin-left: 15px;
+    color : #273e60; 
+    font-size : 15px ;
+    text-transform : capitalize; 
+ }
+ .comments .comment  p{
+    color: #999;
+    font-size: 13px;
+ }
+
+ /* reservation css */
+ #section_reservation{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    padding: 0 10%;
+ }
+ .reservation{
+    background-color: rgba(0,0,0,0.1);
+    width: 30%;
+    /*padding: 10px;*/
+    margin-top: 20px;
+    border-radius: 6px;
+ }
+ .reservation form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+ }
+ .reservation form div , .reservation form input[type="submit"]{
+    display: flex;
+    flex-direction : column;
+ }
+ .reservation form div label{
+    font-size: 14px ;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+ }
+ .reservation form div input{
+    border: 1px solid transparent;
+    padding: 8px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    outline: 0;
+    margin-bottom: 10px;
+ }
+ .reservation form div input:focus{
+    outline: 1px solid #27ae60;
+ }
+ .reservation  form input[type="submit"]{
+    text-align: center;
+    align-items: center;
+    padding: 5px 60px;
+    border: 1px solid transparent;
+    background-color: #27ae60;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+ }
+ footer{
+    background-color: rgba(0,0,0,0.05);
+ }
+ footer .service_list{
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap ;
+ }
+ .services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+ }
+.services img {
+    width: 40px ;
+    background-color: #27ae60;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.services p{
+    color: #333; 
+}
+footer hr {
+    margin-bottom: 15px;
+    background-color: #ccc;
+    height: 2px;
+    width: 100%;
+    border: 0;
+}
+
+footer div p{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #222;
+}
+footer div span{
+    color : #27ae60;
+}
+
+/*responsive */
+@media(max-width : 964px){
+    header .menu {
+        display: none;
+    }
+    header{
+        padding : 0 20px; 
+    }
+    #home{
+        flex-direction: column;
+        padding: 12px;
+        height: fit-content;
+    }
+
+    #home .left , #home .rigth{
+        width: 100%;
+        padding : 0 ; 
+    }
+    #home .left{
+        margin: 100px 0;
+    }
+    #home .left h3 {
+        font-size: 14px ; 
+    }
+    #home .left h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #home .left .btn_commande{
+        font-size: 13px;
+    } 
+    #home .left p{
+        font-size: 15px; 
+    }
+    #menu .contenu .box {
+        width: 100%;
+        max-width: 260px;
+    }
+    #A_propos {
+        padding : 10px;
+        height: auto;
+    }
+    #A_propos .about{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #A_propos .about .img_a_propos , #A_propos .about .text{
+        width: 100%;
+    }
+    #A_propos .about .img_a_propos {
+        height: fit-content;
+    }
+    #A_propos .about .img_a_propos img {
+        width: 50%;
+    }
+    #A_propos .about .text{
+        text-align: center;
+        padding: 20px ;
+    }
+    .comment_section{
+        height: auto;
+    }
+    .comment_section .comments .comment{
+       width: 100%;
+       margin-top: 20px ;
+    }
+    .section_reservation .reservation{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .service_list .services{
+        padding: 0 20px;
+    }
+    .toggle_menu{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .toggle_menu::before{
+        position: absolute;
+        height: 3px;
+        width: 28px;
+        content: " ";
+        display: flex;
+        background-color: #27ae60;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 #27ae60;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .toggle_menu.active::before{
+        box-shadow: 0 0 0 #27ae60;
+        transform: translateY(0) rotate(135deg);
+    }
+    .toggle_menu::after{
+        position: absolute;
+        height: 3px;
+        width: 28px;
+        content: " ";
+        background-color: #27ae60;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s ;
+    }
+    .toggle_menu.active::after{
+        transform: translateY(0) rotate(-135deg); 
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 10 rgba(0,0,0,0.1) ;
+    }
+    header .menu.responsive li{
+        margin: 15px 0;
+
+    }
+}
